@@ -76,6 +76,7 @@ body{
 .btn:hover{
     background-color:hsl(172deg 62% 77%);
     color: var(--Very-dark-cyan);
+    cursor: pointer;
 }
 .custom{
     border: none;
@@ -89,10 +90,88 @@ body{
 .custom::placeholder{
     color: var(--Dark-grayish-cyan);
 }
+.show-tip{
+    background-color: var(--Very-dark-cyan);
+    border-radius: 0.4rem;
+    padding: 26px;
+}
+.price{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    align-items: center;
+}
+.price h4{
+    color: var(--White);
+}
+.price small{
+    color: var(--Dark-grayish-cyan);
+}
+.price h1{
+    color: var(--Strong-cyan);
+}
+.rest-btn{
+    width: 100%;
+    padding: 11px;
+    background-color: var(--Strong-cyan);
+    color: var(--Very-dark-cyan);
+    font-size: 20px;
+    border: none;
+    border-radius: 6px;
+}
+.rest-btn:hover{
+    background-color: hsl(172deg 62% 77%);
+    cursor: pointer;
+}
 @media(max-width:599px){
     .btns{
         grid-template-columns: 140px 140px;
         gap: 0.7rem;
         justify-content: space-between;
+    }
+}
+@media(min-width:600px){
+    body{
+        display: flex;
+        justify-content: center;
+    }
+    .container{
+        width:750px;
+        margin-top: 2rem;
+    }
+    .card{
+        display: grid;
+        grid-template-columns: 400px 300px;
+        justify-content: space-between;
+        column-gap: 0.5rem;
+    }
+    .text-input{
+        font-size: 18px;
+    }
+    .calc-tip h3{
+       font-size: 16px;
+    }
+    .btns{
+        grid-template-columns: 110px 110px 110px;
+        gap: 0.7rem;
+    }
+    .btn{
+        font-size: 16px;
+    }
+    .custom{
+        font-size: 16px;
+    }
+    .show-tip{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-radius: 10px;
+    }
+    .price{
+        margin-bottom: 2rem;
+    }
+    .rest-btn{
+        padding: 7px;
+        font-size: 16px;
     }
 }
